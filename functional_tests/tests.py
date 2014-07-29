@@ -44,11 +44,7 @@ class NewVisitorTest(LiveServerTestCase):
         # "1: Buy peacock feathers" as an item in a to-do list
         inputbox.send_keys(Keys.ENTER)
         edith_list_url = self.browser.current_url
-<<<<<<< HEAD
-        self.assertRegex(edith_list_url, 'lists/.+')
-=======
         self.assertRegex(edith_list_url, '/lists/.+')
->>>>>>> 9901b8de4420f0b00ee0d324bbfa95203d68bfb9
         self.check_for_row_in_list_table('1: Buy peacock feathers')
 
         '''
